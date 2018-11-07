@@ -1,11 +1,6 @@
-# Video Instructions
+# MicroProfile Config Demo with Payara Micro
 
-For each video, there is a Git branch with a matching name that acts as a
-starting point.
-
-## Video 3.1: Enabling multi-environment configuration using MicroProfile Config
-
-### Step 1: Add MicroProfile Config dependency
+## Step 1: Add MicroProfile Config dependency
 
 In order to use the config API, add the following dependency to your `build.gradle` file.
 ```groovy
@@ -14,7 +9,7 @@ dependencies {
 }
 ```
 
-### Step 2: Simple `@ConfigProperty` injection
+## Step 2: Simple `@ConfigProperty` injection
 
 All configuration values can be injected, using the `@ConfigProperty` annotation. Create the
 following configuration bean class.
@@ -50,7 +45,7 @@ public class ConfigurationBean {
 The values are either taken from system properties, ENV variables or the contents
 of the `microprofile-config.properties` file.
 
-### Step 3: Add custom MicroProfile Config converters
+## Step 3: Add custom MicroProfile Config converters
 
 To convert configuration values to non standard data types, implement a custom converter.
 ```java
@@ -75,7 +70,7 @@ You need to register all custom converters in the service loader file
     private JsonObject aJsonObject;
 ```
 
-### Step 4: Programmatic configuration
+## Step 4: Programmatic configuration
 
 Add the following REST resource implementation class to show the programmatic usage of the `Config` API.
 
