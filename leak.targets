@@ -1,0 +1,6 @@
+GET http://localhost:8080/api/config-property/a.dynamic.string
+GET http://localhost:8080/api/config-property/a.json.object
+GET http://localhost:8080/api/config-property/a.long
+GET http://localhost:8080/api/config-property/a.optional.string
+GET http://localhost:8080/api/config-property/a.string.array
+GET http://localhost:8080/api/config-property/hostname

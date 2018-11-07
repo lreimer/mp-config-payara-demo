@@ -1,0 +1,3 @@
+GET http://localhost:8080/api/config
+GET http://localhost:8080/api/config/a.optional.string
+GET http://localhost:8080/api/config/a.long

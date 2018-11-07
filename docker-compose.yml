@@ -1,0 +1,28 @@
+version: "3"
+
+services:
+  config-service:
+    build:
+      context: .
+    image: config-service:1.0.1
+    environment:
+    - A_OPTIONAL_STRING=Value from Docker Compose ENV
+    - A_LONG=1234567890
+    ports:
+    - "8080:8080"
+    - "9090:9090"
+    networks:
+    - jee8net
+    labels:
+      kompose.service.type: loadbalancer
+    deploy:
+      replicas: 1
+      resources:
+        limits:
+          memory: 640M
+        reservations:
+          memory: 640M
+
+networks:
+  jee8net:
+    driver: bridge
