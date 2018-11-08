@@ -2,7 +2,7 @@ package cloud.nativ.javaee;
 
 import org.eclipse.microprofile.config.inject.ConfigProperty;
 
-import javax.enterprise.context.ApplicationScoped;
+import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.inject.Provider;
 import javax.json.JsonObject;
@@ -11,8 +11,9 @@ import java.util.Optional;
 
 /**
  * Wrapper bean to showcase the usage of MicroProfile @ConfigProperty annotation.
+ * Be sure to make this bean @RequestScoped when using Provider<String>.
  */
-@ApplicationScoped
+@RequestScoped
 public class ConfigPropertyBean {
 
     @Inject
